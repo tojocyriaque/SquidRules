@@ -1,0 +1,9 @@
+CRITICAL - 2024-04-30 05:34:27 --> Error: Call to undefined function App\Controllers\makeCmd()
+[Method: POST, Route: Traitement/getDonner/]
+in APPPATH/Controllers/Traitement.php on line 67.
+ 1 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Traitement->getDonner()
+ 2 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
