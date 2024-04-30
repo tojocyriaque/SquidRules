@@ -9,5 +9,8 @@
     - RAMAROSON Tojotiana Cyriaque
     - RAKOTONARIVO Andriamiharitsoa
     - RAZANADRAKOTO Nirintsoa Heriniaina
-
+    - ANDRINIAINA Miradosoa Odilon
+    - RAZANADRATSARA Lucky Kaiser Sahel
+    - ANDRIANASOLO Miharisoa Jedidia
+    - HAJANIRINA Fanomezantsoa Heritina    
 
