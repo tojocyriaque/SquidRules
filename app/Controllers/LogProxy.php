@@ -1,7 +1,7 @@
 <?php
 
 /*
-	Otrzao ny ao @ Routes.php:
+	Routes.php:
 
 	use App\Controllers\LogProxy;
 	
@@ -22,7 +22,7 @@ class LogProxy extends BaseController{
 	}
 
 	public function list(){
-		$filepath = "/var/log/squid/access.log.1";
+		$filepath = "/var/log/squid/access.log";
 		$searchIp = $this->request->getGet('search');
 		$searchDate = $this->request->getGet('datelog');
 
