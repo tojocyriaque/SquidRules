@@ -122,6 +122,54 @@
   .admin-login button[type="submit"]:hover {
     background-color: #555;
   }
+  .admin-login {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            width: 100%;
+        }
+
+        h1 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        form {
+            text-align: left;
+        }
+
+        select,
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        input[type="number"]::-webkit-inner-spin-button,
+        input[type="number"]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
   
   </style>
 </head>
@@ -129,53 +177,63 @@
   <header>
     <nav>
       <ul>
-        <li><a href="#">list des les regle</a></li>
-        <li><a href="#">ajouter des regles</a></li>
+        <li><a href="http://www.devoir.com/index.php/LogProxy/list">lister les logs du proxy</a></li>
+        <li><a href="#">ajouter des regles Acl</a></li>
+        <li><a href="http://www.devoir.com/index.php/acceuille">mse en cache</a></li>
         
       </ul>
     </nav>
     <h1>squid</h1>
-    <p>information sur les connexions </p>
+    <p>serveur proxy</p>
   </header>
   
   <main>
     <section class="admin-login">
-        
-    <h1>Modifier la configuration</h1>
-    <form action="http://www.devoir.com/index.php/Traitement/getDonner/" method="post">
-        Numero de port d'écoute : 
-        <select name="port">
-            <option value="3128" >3128</option>
-            <option value="8080" >8080</option>
-        </select><br>
-        Type de stockage de cache : 
-        <select id="sens" name="contact">
-            <option value="1" >Système de fichier</option>
-            <option value="2" >Memoire</option>
-        </select><br>
-        <!-- <input type="radio" id="stckChoice1" name="contact" value="1" />
-        <label for="cstckChoice1">Système de fichier</label>
-        <input type="radio" id="stckChoice2" name="contact" value="2" />
-        <label for="stckChoice2">Memoire</label><br> -->
-        <div class="option"></div>
-        taille du telechargement maximum autorisé <input type="number" min="0" name="body_size"> <br>
-        Taille maximale de mis en cache (en MB): <input type="number" min="0" name="taille" id="" placeholder="4 MB"><br>
-        Temps minimum de mis en cache : <input type="number" min="0" name="min_time" id="" placeholder="15 hours"><br>
-        Temps maximum de mis en cache : <input type="number" min="0" name="max_time" id="" placeholder="24 hours"><br>
-        Ajouter une liste d'URL que Squid ne doit jamais mettre en cache : <input type="text" name="url_never" id="" placeholder="*.mp3 *.avi"><br>
-        Ajouter une liste d'URL à télécharger directement : <input type="text" name="url_download" id="" placeholder="*.exe *.zip"><br>
-        Format des fichiers journaux : 
-        <select id="sens" name="log">
-            <option value="common" >common</option>
-            <option value="squid" >squid</option>
-        </select><br>
-        Nom d'hôte que Squid affiche aux clients : <input type="text" name="hote" id="" placeholder="www.example.com"><br>
-        <br>
-        <br>
-        <input type="submit" value="Configure">
-    </form>  
-    </section>
-  </main>
+        <h1>Modifier la configuration de Mise en Cache</h1>
+          <form action="http://www.devoir.com/index.php/Traitement/getDonner/" method="post">
+                  <label for="port">Numero de port d'écoute :</label>
+                  <select name="port" id="port">
+                      <option value="3128">3128</option>
+                      <option value="8080">8080</option>
+                  </select>
+                  <br>
+                  <label for="stockage">Type de stockage de cache :</label>
+                  <select name="stockage" id="stockage">
+                      <option value="1">Système de fichier</option>
+                      <option value="2">Memoire</option>
+                  </select>
+                  <br>
+                  <label for="body_size">Taille du téléchargement maximum autorisé :</label>
+                  <input type="number" min="0" name="body_size" id="body_size">
+                  <br>
+                  <label for="taille">Taille maximale de mis en cache (en MB):</label>
+                  <input type="number" min="0" name="taille" id="taille" placeholder="4 MB">
+                  <br>
+                  <label for="min_time">Temps minimum de mis en cache :</label>
+                  <input type="number" min="0" name="min_time" id="min_time" placeholder="15 hours">
+                  <br>
+                  <label for="max_time">Temps maximum de mis en cache :</label>
+                  <input type="number" min="0" name="max_time" id="max_time" placeholder="24 hours">
+                  <br>
+                  <label for="url_never">Ajouter une liste d'URL que Squid ne doit jamais mettre en cache :</label>
+                  <input type="text" name="url_never" id="url_never" placeholder="*.mp3 *.avi">
+                  <br>
+                  <label for="url_download">Ajouter une liste d'URL à télécharger directement :</label>
+                  <input type="text" name="url_download" id="url_download" placeholder="*.exe *.zip">
+                  <br>
+                  <label for="log">Format des fichiers journaux :</label>
+                  <select name="log" id="log">
+                      <option value="common">common</option>
+                      <option value="squid">squid</option>
+                  </select>
+                  <br>
+                  <label for="hote">Nom d'hôte que Squid affiche aux clients :</label>
+                  <input type="text" name="hote" id="hote" placeholder="www.example.com">
+                  <br><br>
+                  <input type="submit" value="Configurer">
+              </form>
+    </section>  
+</main>
 
   <footer>
   </footer>
