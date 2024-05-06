@@ -56,14 +56,13 @@
       $rules[1] = $name;
       return $rules;
     }
-    
-    $data[] = get_active();
-    $data[] = get_disable(); 
-    $d = json_encode($data);
 
     function send_acl_access_name(){
-      global $d;
-      header('Content-Type: application/json');
-      echo $d;
+      $data[] = get_active();
+      $data[] = get_disable(); 
+      //$d = json_encode($data);
+      //header('Content-Type: application/json');
+      //echo $d;
+      return $data;
     }
 ?>
