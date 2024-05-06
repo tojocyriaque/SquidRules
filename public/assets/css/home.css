@@ -1,0 +1,30 @@
+
+*{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.main-content{
+    margin-left: 280px;
+}
+
+.sidebar{
+    border-right: 1px solid #80808059;
+    height: 100%;
+}
+
+.description{
+    padding-top: 15vh;
+    padding-top: 2vh;
+    width: 70%;
+    font-size: x-large;
+}
+
+.description p{
+    padding-top: 5vh;
+}
+
+.proxyImg{
+    padding-top: 10vh;
+    display: flex;
+    justify-content: center;
+}

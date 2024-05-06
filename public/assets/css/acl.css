@@ -1,0 +1,23 @@
+.acl {
+    width: 70vw;
+    height: 80vh;
+    text-align: center;
+}
+
+.menu{
+    justify-content: center;
+    align-items: center;
+}
+
+.conAcl{
+    justify-content: center;
+}
+
+.conAcl a{
+    margin: auto;
+}
+
+.aclLink{
+    display: flex;
+    background-color: blue;
+}

@@ -1,0 +1,467 @@
+.acl-access {
+  width: 100%;
+  height: 75vh;
+  margin-top: -10vh;
+  position: relative;
+}
+
+.acl-access .acl-access-box {
+  margin: auto;
+  width: 80vw;
+  min-width: 500px;
+  background-color: #fff;
+  position: relative;
+  border-radius: 0px 20px 20px 20px;
+  display: flex;
+  align-items: center;
+  top: 4vh;
+  flex-direction: column;
+  padding: 15vh 2.5vw 0 2.5vw;
+  height: 72vh;
+}
+
+.acl-access .acl-access-box::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -50px;
+  width: 20%;
+  height: 50px;
+  background-color: #fff;
+  border-radius: 20px 0px 0px 0px;
+}
+
+.acl-access .acl-access-box::after {
+  content: "";
+  position: absolute;
+  left: 20%;
+  top: -50px;
+  width: 7.5%;
+  height: 50px;
+  background-color: #fff;
+  clip-path: polygon(0% 0%, 100% 100%, 0% 100%);
+}
+
+.acl-access .acl-access-box .logo {
+  background-image: url("../assets/access.png");
+  background-position: center;
+  background-size: cover;
+  width: 15vw;
+  height: 15vw;
+  min-width: 100px;
+  min-height: 100px;
+  position: absolute;
+  top: -8vh;
+}
+
+.acl-access .acl-access-box .table {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  overflow-y: auto;
+  margin-top: 10vh;
+  height: 50vh;
+  font-size: 1vw;
+}
+
+.acl-access .acl-access-box .table .tbody {
+  overflow-y: auto;
+  height: 30vh;
+}
+
+.acl-access .acl-access-box .table .tbody::-webkit-scrollbar {
+  width: 0.5vw;
+  margin: 0 1vw;
+}
+
+
+.acl-access .acl-access-box .table .tbody::-webkit-scrollbar-track {
+  background: #555;
+  border-radius: 1vw;
+}
+.acl-access .acl-access-box .table .tbody::-webkit-scrollbar-thumb {
+  background: #222;
+  border-radius: 1vw;
+}
+
+.acl-access .acl-access-box .table .th {
+  display: flex;
+  width: 100%;
+  height: 6vh;
+}
+
+.acl-access .acl-access-box .table .tr {
+  margin: 1vh 0;
+}
+
+.acl-access .acl-access-box .table .tr:last-child {
+  margin-bottom: 150px;
+}
+
+.acl-access .acl-access-box .table .th .mac-and-ip {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 80%;
+  padding: 1vh;
+  background-color: #000;
+  clip-path: polygon(0% 0%, 98% 0%, 100% 100%, 0% 100%);
+}
+
+.acl-access .acl-access-box .table .tr .mac-and-ip {
+  background-color: #f00;
+}
+
+.acl-access .acl-access-box .table .th .mac-and-ip h1 {
+  color: #fff;
+}
+
+.acl-access .acl-access-box .table .th .actions {
+  background-color: #000;
+  padding: 1vh;
+  width: 20%;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 8% 100%);
+}
+
+.acl-access .acl-access-box .table .tr .actions {
+  background-color: #f00;
+  padding: 1.3vh;
+    color: #fff;
+    font-size: 1.2vw;
+}
+
+.acl-access .acl-access-box .table .th .actions h1 {
+  color: #fff;
+  text-align: center;
+}
+
+.acl-access .acl-access-box .table .tr .actions .logo-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.acl-access .acl-access-box .table .tr .actions .logo-actions button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-size: 1.2vw;
+  color: #fff;
+}
+
+.acl-access .acl-access-box .table .tr .actions .logo-actions .supp {
+  cursor: pointer;
+}
+
+.acl-access .access {
+    font-size: .8vw;
+  height: 70%;
+  width: 18%;
+  border-radius: 10px;
+  border: none;
+  clip-path: polygon(0% 0%, 93% 0%, 100% 100%, 7% 100%);
+}
+
+.acl-access .submit {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  padding-bottom: 1vh;
+}
+
+.acl-access .submit button {
+  display: block;
+  font-size: 1vw;
+  width: 20%;
+  color: beige;
+  border-radius: 15px;
+  background-color: rgb(4, 34, 54);
+  border: none;
+  padding: 1vh;
+}
+
+.add-access {
+  position: absolute;
+  width: 94vw;
+  height: 79vh;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(5px);
+  background-color: #190306;
+}
+
+.add-access .containeradd {
+  position: relative;
+}
+
+.add-access .containerdir {
+  width: 55vw;
+  height: 65vh;
+  background-color: #fff;
+  border-radius: 1.5vw;
+  clip-path: polygon(0 0, 20% 0, 25% 9%, 95% 9%, 100% 14%, 100% 100%, 0 100%);
+}
+
+.add-access .square {
+  width: 8vw;
+  height: 10vw;
+  position: absolute;
+  background-color: #f009;
+  z-index: 3;
+  border-radius: 1vw;
+  transform: rotate(60deg);
+}
+
+.add-access .square1 {
+  right: -6vw;
+  top: 30vh;
+}
+
+.add-access .square2 {
+  right: -4vw;
+  top: 40vh;
+}
+
+.add-access .square3 {
+  right: -2vw;
+  top: 50vh;
+}
+
+.add-access .dir {
+  width: 55vw;
+  height: 59vh;
+  border-radius: 1.5vw;
+  position: absolute;
+  top: 5.9vh;
+  z-index: 2;
+  overflow: hidden;
+  padding: 2vh 4vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+}
+
+.add-access .section {
+  width: 43vw;
+  height: 8vh;
+}
+
+.add-access .section hr {
+  background-color: #000;
+  border: none;
+  height: 1px;
+  width: 43vw;
+  margin: 2vh 0;
+}
+
+.add-access .s1 .radio{
+  display: flex;
+  font-size: 1vw;
+}
+
+.add-access .s1 .radio1{
+  margin: 0 1vw;
+}
+
+.add-access .s1 input{
+  width: .7vw;
+  height: .7vw;
+  margin-left: .5vw;
+}
+
+.add-access .s2 {
+  height: 35vh;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.add-access .s2 .checks{
+  display: flex;
+  font-size: 1vw;
+}
+
+.add-access .s2 .checks input{
+  width: .7vw;
+  height: .7vw;
+  margin: .8vh .5vw 0 0;
+}
+
+.add-access .s3 {
+  height: 10vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.add-access button {
+  border: none;
+  border-radius: 2vw;
+  padding: 1vh;
+}
+
+.add-access .btns{
+  display: flex;
+  justify-content: space-between;
+  width: 43vw;
+}
+
+.add-access .btns button{
+  width: 6vw;
+  font-size: .8vw;
+  background-color: #999;
+}
+
+.add-access .btns .ok{
+  background-color: #f00;
+  color: #fff;
+}
+
+.modif-access {
+  position: absolute;
+  width: 94vw;
+  height: 79vh;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(5px);
+  background-color: #190306;
+}
+
+.modif-access .containermodif {
+  position: relative;
+}
+
+.modif-access .containerdir {
+  width: 55vw;
+  height: 65vh;
+  background-color: #fff;
+  border-radius: 1.5vw;
+  clip-path: polygon(0 0, 20% 0, 25% 9%, 95% 9%, 100% 14%, 100% 100%, 0 100%);
+}
+
+.modif-access .square {
+  width: 8vw;
+  height: 10vw;
+  position: absolute;
+  background-color: #f009;
+  z-index: 3;
+  border-radius: 1vw;
+  transform: rotate(60deg);
+}
+
+.modif-access .square1 {
+  right: -6vw;
+  top: 30vh;
+}
+
+.modif-access .square2 {
+  right: -4vw;
+  top: 40vh;
+}
+
+.modif-access .square3 {
+  right: -2vw;
+  top: 50vh;
+}
+
+.modif-access .dir {
+  width: 55vw;
+  height: 59vh;
+  border-radius: 1.5vw;
+  position: absolute;
+  top: 5.9vh;
+  z-index: 2;
+  overflow: hidden;
+  padding: 2vh 4vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+}
+
+.modif-access .section {
+  width: 43vw;
+  height: 8vh;
+}
+
+.modif-access .section hr {
+  background-color: #000;
+  border: none;
+  height: 1px;
+  width: 43vw;
+  margin: 2vh 0;
+}
+
+.modif-access .s2 {
+  height: 35vh;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.modif-access .s2 .checks{
+  display: flex;
+  font-size: 1vw;
+}
+
+.modif-access .s2 .checks input{
+  width: .7vw;
+  height: .7vw;
+  margin: .8vh .5vw 0 0;
+}
+
+.modif-access .s3 {
+  height: 10vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.modif-access button {
+  border: none;
+  border-radius: 2vw;
+  padding: 1vh;
+}
+
+.modif-access .btns{
+  display: flex;
+  justify-content: space-between;
+  width: 43vw;
+}
+
+.modif-access .btns button{
+  width: 6vw;
+  font-size: .8vw;
+  background-color: #999;
+}
+
+.modif-access .btns .ok{
+  background-color: #f00;
+  color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+  .acl-access .acl-access-box {
+    width: 90vw;
+  }
+}
+
+/* Pour les écrans plus petits que 576px */
+@media screen and (max-width: 576px) {
+  .acl-access .acl-access-box {
+    width: 95vw;
+  }
+}
